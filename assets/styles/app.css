@@ -1,0 +1,113 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 55px 0;
+    background-color: #eef1f1;
+  
+  }
+  html {
+    font-family: "helvetica neue", sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EAEAEB;
+    height: 5em;
+    line-height: 70px;
+    background-color: #607471;
+  }
+  .wildkodskola-logo {
+    margin: 0 1em;
+    padding: 0% 1% 0 0%;
+  }
+  .wildkodskola-logo a {
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #FFFFFF;
+  }
+  .menu {
+    margin-right: 1em;
+    display: flex;
+    white-space: nowrap;
+  }
+  .menu a {
+    clear: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0 2em;
+    line-height: 70px;
+  }
+  .menu a:hover {
+    color: #D2E605;
+  }
+  .menu li {
+    list-style-type: none;
+  }
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+  }
+  #toggle {
+    display: none;
+  }
+  .navbar-footer {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    label {
+      display: block;
+      cursor: pointer;
+    }
+    .menu {
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
+    .menu li {
+      border-bottom: 1px solid black;
+      margin: 0;
+    }
+    #toggle:checked ~ .menu {
+      display: block;
+    }
+    /* Navbar footer - mobile */
+  
+  .navbar-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #32baa6;
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .navbar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+    color: #FFFFFF;
+  }
+  
+  .navbar-link:hover {
+    color: #D2E605;
+  }
+  }
+  
+  
+  
+  
