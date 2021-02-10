@@ -7,9 +7,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;500&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-        <title>{% block title %}Welcome to the Kingdom of Wildkodskola!{% endblock %}</title>
+        <title>{% block title %}Welcome - Kingdom of Wildkodskola{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="../assets/styles/app.css">
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>

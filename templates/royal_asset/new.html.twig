@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New RoyalAsset{% endblock %}
+
+{% block body %}
+    <h1>Create new RoyalAsset</h1>
+
+    {{ include('royal_asset/_form.html.twig') }}
+
+    <a href="{{ path('royal_asset_index') }}">back to list</a>
+{% endblock %}

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\RoyalAssetsRepository;
+use App\Repository\RoyalAssetRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=RoyalAssetsRepository::class)
+ * @ORM\Entity(repositoryClass=RoyalAssetRepository::class)
  */
-class RoyalAssets
+class RoyalAsset
 {
     /**
      * @ORM\Id
@@ -36,6 +36,12 @@ class RoyalAssets
      * @ORM\Column(type="integer")
      */
     private $nb_asset;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="royalAssets")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
 
     public function getId(): ?int
     {
@@ -86,6 +92,18 @@ class RoyalAssets
     public function setNbAsset(int $nb_asset): self
     {
         $this->nb_asset = $nb_asset;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

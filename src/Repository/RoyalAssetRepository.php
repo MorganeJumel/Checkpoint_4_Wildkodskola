@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\RoyalAssets;
+use App\Entity\RoyalAsset;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method RoyalAssets|null find($id, $lockMode = null, $lockVersion = null)
- * @method RoyalAssets|null findOneBy(array $criteria, array $orderBy = null)
- * @method RoyalAssets[]    findAll()
- * @method RoyalAssets[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method RoyalAsset|null find($id, $lockMode = null, $lockVersion = null)
+ * @method RoyalAsset|null findOneBy(array $criteria, array $orderBy = null)
+ * @method RoyalAsset[]    findAll()
+ * @method RoyalAsset[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RoyalAssetsRepository extends ServiceEntityRepository
+class RoyalAssetRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, RoyalAssets::class);
+        parent::__construct($registry, RoyalAsset::class);
     }
 
     // /**
-    //  * @return RoyalAssets[] Returns an array of RoyalAssets objects
+    //  * @return RoyalAsset[] Returns an array of RoyalAsset objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class RoyalAssetsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?RoyalAssets
+    public function findOneBySomeField($value): ?RoyalAsset
     {
         return $this->createQueryBuilder('r')
             ->andWhere('r.exampleField = :val')

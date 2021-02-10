@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register - Kingdom of Wildkodskola{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+    <h1 class="register-title">Register an account</h1>
+    <div class="register-form">
+        <div>
+            {{ form_start(registrationForm) }}
+            <div>
+                {{ form_widget(registrationForm.email) }}
+                {{ form_label(registrationForm.email) }}
+            </div>
+            <div>
+                {{ form_widget(registrationForm.plainPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_label(registrationForm.plainPassword) }}
+            </div>
+            <div>
+                {{ form_widget(registrationForm.firstname) }}
+                {{ form_label(registrationForm.firstname) }}
+            </div>
+            <div>
+                {{ form_widget(registrationForm.lastname) }}
+                {{ form_label(registrationForm.lastname) }}
+            </div>
+            <div>
+                <button type="submit" class="button">Register</button>{{ button_label|default('') }}</button>
+                {{ form_end(registrationForm) }}
+            </div>  
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit RoyalAsset{% endblock %}
+
+{% block body %}
+    <h1>Edit RoyalAsset</h1>
+
+    {{ include('royal_asset/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('royal_asset_index') }}">back to list</a>
+
+    {{ include('royal_asset/_delete_form.html.twig') }}
+{% endblock %}

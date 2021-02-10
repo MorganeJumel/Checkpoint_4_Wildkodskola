@@ -27,6 +27,11 @@ class Booking
      */
     private $nb_ticket;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="bookings")
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Booking
     public function setNbTicket(int $nb_ticket): self
     {
         $this->nb_ticket = $nb_ticket;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

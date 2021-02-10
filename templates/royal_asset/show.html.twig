@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Royal Assets - Kingdom of Wildkodskola{% endblock %}
+
+{% block body %}
+    
+    <h1>Royal Assets</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ royal_asset.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ royal_asset.description }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ royal_asset.nbAsset }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('royal_asset_index') }}">Back to list</a>
+    
+    {% if app.user and app.user.id == royal_asset.user.id %}
+        <a href="{{ path('royal_asset_edit', {'id': royal_asset.id}) }}">Edit</a>
+    {% endif %}
+    
+{% endblock %}
